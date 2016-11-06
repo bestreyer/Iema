@@ -13,13 +13,13 @@ protected:
     RPG & rpg;
     // Массив битов
     std::unique_ptr<char[]> bits;
-    // Максимальное кол-во элементов будет вставлено
+    // Максимальное кол-во элементов которое будет вставлено
     uint maxCountElements;
     // Количестов hash функций
     uint countHashFunc;
     // Количество бит
     uint countBits;
-    // вероятность ложно срабатывания
+    // вероятность ложного срабатывания
     float error;
 
     std::unique_ptr<HashFunc[]> hashFuncs;
@@ -39,7 +39,7 @@ public:
     BloomFilter(uint mce, float error, RPG & rpg);
     void add(const std::string & el);
     bool check(const std::string & el);
-    
+
     void debugBits();
 };
 #endif
